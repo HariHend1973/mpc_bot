@@ -1,2 +1,2 @@
 # mpc_bot
-python telegram bot for controling mpd using mc command
+python telegram bot for controlling mpd using mc command
