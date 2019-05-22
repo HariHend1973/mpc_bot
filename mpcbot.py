@@ -14,10 +14,10 @@ def start(bot, update):
 
 def mpc_callback(bot, update, args):
     user_says = " ".join(args)
-    print user_says
+    print (user_says)
     mpcout = os.popen("/home/harry/mpc/func_" + user_says).read()
     if mpcout:
-        print mpcout
+        print (mpcout)
         update.message.reply_text("<b>" + mpcout + "</b>", parse_mode='HTML', quote=False)
 
 def echo(bot, update):
@@ -27,18 +27,18 @@ def echo(bot, update):
     words = words.lower()
     res = words.split()
     if words == "mpc": 
-        print "usage mpc blabla"
+        print ("usage mpc blabla")
         update.message.reply_text("<b>Usage mpc blablabla</b>", parse_mode='HTML')
         return
     if not "mpc" in words: return
     #print ("The list of words is : " +  str(res))
     for i in range (0, len (res)):
-        #print res[i]
+        #print (res[i])
         s += res[i] + " "
-    print s
+    print (s)
     mpcout = os.popen("/home/harry/mpc/func_" + s).read()
     if mpcout:
-        print mpcout
+        print (mpcout)
         update.message.reply_text("<b>" + mpcout + "</b>", parse_mode='HTML', quote=False)
                      
 
