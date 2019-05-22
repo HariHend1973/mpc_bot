@@ -1,0 +1,3 @@
+#!/bin/bash
+#mpc play
+echo set volume by $1 
